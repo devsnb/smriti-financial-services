@@ -16,121 +16,316 @@
 		<title>Smriti Financial Solutions</title>
 	</head>
 	<body>
-		<header>
+		<header id="header">
 			<div class="container">
-				<div id="logo">
-					<img src="./assets/logo.png" alt="smriti financial services logo" />
-				</div>
-				<nav id="main-nav">
-					<ul>
-						<li>Home</li>
-						<li>Services</li>
-						<li>Partners</li>
-						<li>About Us</li>
-						<li>Contact Us</li>
+				<nav class="navbar">
+					<div id="logo">
+						<a href="#">
+							<img
+								src="./assets/logo.png"
+								alt="smriti financial services logo"
+							/>
+						</a>
+					</div>
+
+					<ul class="nav-menu">
+						<li class="nav-item">
+							<a href="#" class="nav-link">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="#services" class="nav-link">Services</a>
+						</li>
+						<li class="nav-item">
+							<a href="#partners" class="nav-link">Partners</a>
+						</li>
+						<li class="nav-item">
+							<a href="#about-us" class="nav-link">About Us</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="#contact-us" class="nav-link cta-btn">
+								<img
+									src="./assets/social-icons/arcticons_google-mail.png"
+									alt="google mail icon"
+								/>
+								Contact Us
+							</a>
+						</li>
 					</ul>
+
+					<div class="hamburger">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</div>
 				</nav>
 			</div>
 		</header>
 		<main>
-			<div class="container">
-				<div class="hero-content">
-					<div class="hero-heading">
-						<h2>Guiding People</h2>
-						<h2>Through</h2>
-						<h2>Life's Financial</h2>
-						<h2>Journey</h2>
-					</div>
-					<h4>Making Your Life Easier Is Our Responsibility</h4>
-					<div class="actions">
-						<button>Our Services</button>
-						<button>Contact Us</button>
+			<section id="hero">
+				<div class="container">
+					<div class="hero-container">
+						<div class="hero-content">
+							<div class="hero-heading">
+								<h2>Guiding People</h2>
+								<h2>Through</h2>
+								<h2>Life's Financial</h2>
+								<h2>Journey</h2>
+							</div>
+							<h4>Making Your Life Easier Is Our Responsibility</h4>
+							<div class="actions">
+								<a href="#services">
+									<button class="btn-primary">Our Services</button>
+								</a>
+								<a href="#contact-us">
+									<button class="cta-btn">
+										<img
+											src="./assets/social-icons/arcticons_google-mail.png"
+											alt="google mail icon"
+										/>
+										Contact Us
+									</button>
+								</a>
+							</div>
+						</div>
+						<div id="hero-image">
+							<img
+								class="illustration"
+								src="./assets/illustration.png"
+								alt="art illustration of a bank loan"
+							/>
+						</div>
 					</div>
 				</div>
-			</div>
-			<h2 id="why-section">Why Choose Us?</h2>
-			<div class="why-section">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-			<h2 id="services">Our Services</h2>
-			<div class="services"></div>
-			<h2 id="partners">Banking Partners</h2>
-			<div class="partners"></div>
-			<div id="about-us">
-				<div>
-					<h2>About Us</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi fugit
-						minima ipsum possimus similique tempore eaque delectus corporis
-						totam nemo.
-					</p>
+			</section>
+			<section id="why-section">
+				<h2 class="section-header">Why Choose Us?</h2>
+				<div class="why-section">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
 				</div>
-				<div></div>
-				<div></div>
-			</div>
-			<div id="contact-us">
-				<div class="contact-content">
-					<div>
-						<h2>Contact Us</h2>
+			</section>
+			<section id="services">
+				<h2 class="section-header">Our Services</h2>
+				<div class="container">
+					<div class="services">
+						<div>
+							<h3>Personal Loan</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+								eligendi temporibus dolores enim totam molestias?
+							</p>
+						</div>
+						<div>
+							<h3>Business Loan</h3>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Similique ab eligendi optio amet. Aspernatur, alias.
+							</p>
+						</div>
+						<div>
+							<h3>Car Loan</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+								ipsa reprehenderit, deleniti omnis non sapiente.
+							</p>
+						</div>
+						<div>
+							<h3>Loan Against Property</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+								architecto sit, repudiandae doloremque beatae blanditiis.
+							</p>
+						</div>
+						<div>
+							<h3>Home Loan</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Officiis distinctio architecto, et corrupti voluptatibus amet.
+							</p>
+						</div>
+						<div>
+							<h3>Gold Loan</h3>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+								Eveniet, omnis inventore! Quisquam dignissimos ipsum distinctio.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="partners">
+				<h2 class="section-header">Banking Partners</h2>
+				<div class="container">
+					<div class="slider-edge-blur-container">
+						<div class="partners">
+							<div class="partners-bank">
+								<img
+									src="./assets/bank-logos/Axis-National-Bank.jpg"
+									alt="axis bank logo"
+								/>
+							</div>
+							<div class="partners-bank">
+								<img
+									src="./assets/bank-logos/ICICI-Bank.jpg"
+									alt="icici bak logo"
+								/>
+							</div>
+							<div class="partners-bank">
+								<img
+									src="./assets/bank-logos/State-Bank-of-India.jpg"
+									alt="state bank of india logo"
+								/>
+							</div>
+							<div class="partners-bank">
+								<img
+									src="./assets/bank-logos/HDFC-Bank.jpg"
+									alt="hdfc bank logo"
+								/>
+							</div>
+							<div class="partners-bank">
+								<img
+									src="./assets/bank-logos/Bank-of-Baroda.jpg"
+									alt="bank of baroda logo"
+								/>
+							</div>
+							<div class="partners-bank">
+								<img
+									src="./assets/bank-logos/Punjab-National-Bank.png"
+									alt="punjab national bank logo"
+								/>
+							</div>
+							<div class="partners-bank">
+								<img
+									src="./assets/bank-logos/Bank-of-India.jpg"
+									alt="bank of india logo"
+								/>
+							</div>
+							<div class="partners-bank">
+								<img
+									src="./assets/bank-logos/IndusInd-Bank.jpg"
+									alt="indusind bank logo"
+								/>
+							</div>
+							<div class="partners-bank">
+								<img
+									src="./assets/bank-logos/Kotak-Mahindra-Bank.png"
+									alt="kotak mahindra bank logo"
+								/>
+							</div>
+							<div class="partners-bank">
+								<img
+									src="./assets/bank-logos/Yes-Bank.jpg"
+									alt="yes bank logo"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="about-us">
+				<div class="about container">
+					<div class="about-img">
+						<img
+							src="./assets/about-us.png"
+							alt="illustration of an about us page"
+						/>
+					</div>
+					<div class="about-content">
+						<h2>About Us</h2>
 						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam
-							assumenda vero fugiat quia. Fuga magnam ut exercitationem vero
-							ipsum, reiciendis repellat harum officiis cupiditate eveniet?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+							fugit minima ipsum possimus similique tempore eaque delectus
+							corporis totam nemo. Lorem ipsum dolor sit amet, consectetur
+							adipisicing elit. Eum adipisci in earum voluptatibus delectus
+							quisquam dicta, quo aperiam sed neque?
 						</p>
 					</div>
-					<div class="socials">
-						<div class="facebook">
-							<div class="facebook-logo">
-								<img
-									src="./assets/social-icons/facebook-icon.png"
-									alt="facebook logo"
-								/>
-							</div>
-							<p id="facebook-url">fb.com</p>
+				</div>
+			</section>
+			<section id="contact-us">
+				<div class="contact container">
+					<div class="contact-content">
+						<div>
+							<h2>Contact Us</h2>
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam
+								assumenda vero fugiat quia. Fuga magnam ut exercitationem vero
+								ipsum, reiciendis repellat harum officiis cupiditate eveniet?
+							</p>
 						</div>
-						<div class="telephone">
-							<div class="telephone-logo">
-								<img
-									src="./assets/social-icons/telephone-icon.png"
-									alt="telephone logo"
-								/>
+						<div class="socials">
+							<div class="facebook">
+								<div class="facebook-logo">
+									<img
+										src="./assets/social-icons/facebook-icon.png"
+										alt="facebook logo"
+									/>
+								</div>
+								<p id="facebook-url">facebook.com/smriti-financial-services</p>
 							</div>
-							<p>Phone Number</p>
+							<div class="telephone">
+								<div class="telephone-logo">
+									<img
+										src="./assets/social-icons/telephone-icon.png"
+										alt="telephone logo"
+									/>
+								</div>
+								<p>555-5555-555</p>
+							</div>
+						</div>
+					</div>
+					<div class="contact-form">
+						<div class="form" id="main-form">
+							<h2>Leave us your info and we'll reach you out</h2>
+							<form id="main-form">
+								<div class="form-group">
+									<label for="name">Name:</label>
+									<input
+										type="text"
+										name="name"
+										id="name"
+										required
+										placeholder="Enter your name here..."
+									/>
+								</div>
+								<div class="form-group">
+									<label for="contact-number">Contact Number:</label>
+									<input
+										type="tel"
+										name="contact-number"
+										id="contact-number"
+										required
+										placeholder="Enter your contact number"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="email">Email:</label>
+									<input
+										type="email"
+										name="email"
+										id="email"
+										required
+										placeholder="Enter your email here..."
+									/>
+								</div>
+								<button class="submit-btn" type="submit">
+									Request Call Back
+								</button>
+							</form>
 						</div>
 					</div>
 				</div>
-				<div class="contact-form">
-					<div class="form">
-						<form id="main-form">
-							<div class="form-group">
-								<label for="name">Name:</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="form-group">
-								<label for="contact-number">Contact Number:</label>
-								<input
-									type="number"
-									name="contact-number"
-									id="contact-number"
-								/>
-							</div>
-							<div class="form-group">
-								<label for="email">Email:</label>
-								<input type="email" name="email" id="email" />
-							</div>
-							<button type="submit">Submit</button>
-						</form>
-					</div>
-				</div>
-			</div>
+			</section>
 		</main>
-		<footer>
-			<p>Copyright &copy; Smriti Financial Services. All Rights Reserved.</p>
+		<footer id="main-footer">
+			<div class="container">
+				<p>Copyright &copy; Smriti Financial Services. All Rights Reserved.</p>
+			</div>
 		</footer>
 		<script src="./scripts/index.js"></script>
 	</body>
