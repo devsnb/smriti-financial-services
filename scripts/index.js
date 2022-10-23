@@ -14,6 +14,13 @@ document.querySelectorAll('.nav-link').forEach(n =>
 	})
 )
 
+// Current year in footer
+const copyrightYear = document.getElementById('copyright-year')
+
+const currentYear = new Date().getFullYear()
+
+copyrightYear.innerText = currentYear
+
 // Contact Us Form Handler
 const form = document.getElementById('main-form')
 
