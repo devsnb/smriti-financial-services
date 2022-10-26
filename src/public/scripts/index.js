@@ -28,7 +28,7 @@ const nameEl = document.getElementById('name')
 const contactNumberEl = document.getElementById('contact-number')
 const emailEl = document.getElementById('email')
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
 	e.preventDefault()
 
 	const data = {
@@ -37,5 +37,18 @@ form.addEventListener('submit', e => {
 		email: emailEl.value
 	}
 
-	console.log(data)
+	const response = await fetch('/mail', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(data)
+	})
+
+	if (!response.ok || response.status !== 200) {
+		console.log('Something went wrong!!')
+	} else {
+		const res = await response.json()
+		console.log(res)
+	}
 })
