@@ -164,6 +164,13 @@ main {
   padding: 0.4rem 0.8rem;
   border-radius: 5px;
   margin-top: 1rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:active {
+  background-color: #fff;
+  color: #7579E7;
 }
 
 #facebook-url {
@@ -213,7 +220,6 @@ main {
 }
 
 .why span {
-  text-decoration: underline;
   font-weight: 600;
 }
 
@@ -699,3 +705,19 @@ input:focus.invalid {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {}
+
+.bold {
+  font-weight: bold;
+}
+
+.differentiate {
+  color: #5abb46;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline-color {
+  text-decoration-color: #5abb46;
+}
