@@ -70,20 +70,28 @@ form.addEventListener('submit', async e => {
 		contactWarningEl.textContent = ''
 	}
 
-	const response = await fetch('/mail', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(data)
-	})
+	try {
+		const response = await fetch('/mail', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(data)
+		})
 
-	if (!response.ok || response.status !== 200) {
+		if (!response.ok || response.status !== 200) {
+			window.alert(
+				'Your request could not be processed at this moment. Please try again after some time.'
+			)
+		} else {
+			nameEl.value = ''
+			emailEl.value = ''
+			contactNumberEl.value = ''
+			window.alert('Your request has been submitted successfully!')
+		}
+	} catch (error) {
 		window.alert(
-			'Your request could not be processed at this moment. Please try again after some time.'
+			'Something unexpected happened. Please try after some time. If the issue persists please email us at contact@smritifinserv.com'
 		)
-	} else {
-		const res = await response.json()
-		window.alert('Your request has been submitted successfully!')
 	}
 })
