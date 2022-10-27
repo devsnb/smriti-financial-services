@@ -426,6 +426,16 @@ main {
   outline: none;
 }
 
+input.invalid,
+input:active.invalid,
+input:focus.invalid {
+  border: 2px solid red;
+}
+
+#name-warning {
+  color: red;
+}
+
 /* Contact Section Ends */
 
 /* Footer Section Starts */

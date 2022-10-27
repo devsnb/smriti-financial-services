@@ -1,3 +1,8 @@
+const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+const NAME_REGEX = /^[a-zA-Z\s]{2,100}$/
+const CONTACT_NUMBER_REGEX =
+	/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+
 // Hamburger Menu Handler
 const hamburger = document.querySelector('.hamburger')
 const navMenu = document.querySelector('.nav-menu')
@@ -28,6 +33,10 @@ const nameEl = document.getElementById('name')
 const contactNumberEl = document.getElementById('contact-number')
 const emailEl = document.getElementById('email')
 
+const nameWarningEl = document.getElementById('name-warning')
+const contactWarningEl = document.getElementById('contact-warning')
+const emailWarningEl = document.getElementById('email-warning')
+
 form.addEventListener('submit', async e => {
 	e.preventDefault()
 
@@ -35,6 +44,30 @@ form.addEventListener('submit', async e => {
 		name: nameEl.value,
 		contactNumber: contactNumberEl.value,
 		email: emailEl.value
+	}
+
+	if (!NAME_REGEX.test(data.name)) {
+		nameEl.classList.add('invalid')
+		nameWarningEl.textContent = 'Please check your provided name'
+	} else {
+		nameEl.classList.remove('invalid')
+		nameWarningEl.textContent = ''
+	}
+
+	if (!EMAIL_REGEX.test(data.email)) {
+		emailEl.classList.add('invalid')
+		emailWarningEl.textContent = 'Please check your provided email'
+	} else {
+		emailEl.classList.remove('invalid')
+		emailWarningEl.textContent = ''
+	}
+
+	if (!CONTACT_NUMBER_REGEX.test(data.contactNumber)) {
+		contactNumberEl.classList.add('invalid')
+		contactWarningEl.textContent = 'Please check your provided contact number'
+	} else {
+		contactNumberEl.classList.remove('invalid')
+		contactWarningEl.textContent = ''
 	}
 
 	const response = await fetch('/mail', {
@@ -46,9 +79,11 @@ form.addEventListener('submit', async e => {
 	})
 
 	if (!response.ok || response.status !== 200) {
-		console.log('Something went wrong!!')
+		window.alert(
+			'Your request could not be processed at this moment. Please try again after some time.'
+		)
 	} else {
 		const res = await response.json()
-		console.log(res)
+		window.alert('Your request has been submitted successfully!')
 	}
 })
