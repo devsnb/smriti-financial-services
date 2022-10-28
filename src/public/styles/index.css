@@ -309,6 +309,10 @@ main {
   margin-top: 2rem;
 }
 
+#partners .section-header {
+  margin-bottom: 2rem;
+}
+
 .slider-edge-blur-container {
   overflow: hidden;
 }
@@ -662,7 +666,7 @@ input:focus.invalid {
     flex-direction: column-reverse;
   }
 
-  .about-content>h2 {
+  .about-content .section-header {
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -681,6 +685,10 @@ input:focus.invalid {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .contact-content .section-header {
+    text-align: center;
   }
 
   /* Contact Us Ends */
