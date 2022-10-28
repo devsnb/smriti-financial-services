@@ -136,7 +136,6 @@ main {
 }
 
 .cta-btn {
-  border: 2px solid #7579E7;
   border-radius: 5px;
   color: #fff;
   background-color: #7579E7;
@@ -151,6 +150,8 @@ main {
 
 .cta-btn:hover,
 .cta-btn:active {
+  text-decoration: none;
+  color: #fff;
   background-color: #686bd1;
 }
 
