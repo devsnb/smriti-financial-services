@@ -28,7 +28,9 @@ app.post('/mail', async (req, res) => {
 			`			
 			Hi ${data.name},
 
-			I'm Sripanth from Sripanth Taxation & Financial Services (OPC) Pvt. Ltd. I've received your request for a chat. We'll connect shortly. I've attached the information you provided for confirmation. If something is incorrect please reply to this email so we can connect with you without any hiccups.
+			Greetings from Smriti Financial Services
+			
+			We're thrilled to know you're interested in our financial services. We've received your request for a chat. Our representative will connect with you shortly. I've attached the information you provided for confirmation. If the provided info is incorrect please reply to this email so we can connect with you without any hiccups.
 			
 			The information you provided is:
 			Name: ${data.name}
@@ -37,13 +39,16 @@ app.post('/mail', async (req, res) => {
 
 
 			Regards,
-			Sripanth
+			Smriti Financial Services,
+     	Sripanth Taxation & Financial Services (OPC) Private Limited
 			`,
 			`
 			<p>Hi ${data.name},</p>
 			<br>
 
-			<p>I'm Sripanth from Sripanth Taxation & Financial Services (OPC) Pvt. Ltd. I've received your request for a chat. We'll connect shortly. I've attached the information you provided for confirmation. If something is incorrect please reply to this email so we can connect with you without any hiccups.</p>
+			<p>Greetings from Smriti Financial Services</p>
+
+			<p>We're thrilled to know you're interested in our financial services. We've received your request for a chat. Our representative will connect with you shortly. I've attached the information you provided for confirmation. If the provided info is incorrect please reply to this email so we can connect with you without any hiccups.</p>
 
 			<br>
 
@@ -55,7 +60,8 @@ app.post('/mail', async (req, res) => {
 			<br>
 
 			<p>Regards,</p>
-			<p>Sripanth</p>
+			<p>Smriti Financial Services,</p>
+			<p>Sripanth Taxation & Financial Services (OPC) Private Limited</p>
 			`
 		)
 	} catch (error) {
